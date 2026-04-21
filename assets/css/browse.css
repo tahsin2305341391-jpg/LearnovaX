@@ -1,0 +1,212 @@
+/* ============================================
+   LearnovaX – Browse & Course Cards CSS
+   assets/css/browse.css
+   ============================================ */
+
+/* ── Filter Bar ─────────────────────────────── */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    background: #fff;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    margin-bottom: 16px;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px 14px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-input:focus { border-color: #6c63ff; }
+
+.filter-bar select {
+    padding: 10px 14px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #374151;
+    background: #fafafa;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.filter-bar select:focus { border-color: #6c63ff; }
+
+.results-count {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+/* ── Browse Grid ────────────────────────────── */
+.browse-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.browse-card {
+    width: calc(33.33% - 14px);
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.browse-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(108,99,255,0.13);
+}
+
+.card-thumb-link { display: block; }
+
+.card-thumb {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.2s;
+}
+
+.browse-card:hover .card-thumb { opacity: 0.92; }
+
+.card-body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-meta {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.card-category {
+    font-size: 11px;
+    font-weight: 700;
+    color: #6c63ff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-level {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 20px;
+}
+
+.level-beginner     { background: #d1fae5; color: #065f46; }
+.level-intermediate { background: #fef3c7; color: #92400e; }
+.level-advanced     { background: #fee2e2; color: #991b1b; }
+
+.card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1f2937;
+    text-decoration: none;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.card-title:hover { color: #6c63ff; }
+
+.card-instructor {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.card-stats {
+    display: flex;
+    gap: 12px;
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 14px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid #f3f4f6;
+}
+
+.card-price {
+    font-size: 17px;
+    font-weight: 800;
+    color: #1f2937;
+}
+
+.free-badge {
+    background: #d1fae5;
+    color: #065f46;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.btn-add-cart {
+    padding: 7px 14px;
+    background: #6c63ff;
+    color: #fff;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.btn-add-cart:hover { background: #5a52d5; }
+
+.btn-enrolled {
+    font-size: 12px;
+    font-weight: 600;
+    color: #065f46;
+    background: #d1fae5;
+    padding: 6px 12px;
+    border-radius: 7px;
+}
+
+.btn-in-cart {
+    padding: 7px 14px;
+    background: #fef3c7;
+    color: #92400e;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* ── Responsive ─────────────────────────────── */
+@media (max-width: 900px) {
+    .browse-card { width: calc(50% - 10px); }
+}
+
+@media (max-width: 580px) {
+    .browse-card { width: 100%; }
+    .filter-bar  { flex-direction: column; }
+    .search-input { min-width: 100%; }
+}

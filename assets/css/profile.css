@@ -1,0 +1,101 @@
+/* ============================================
+   LearnovaX – Profile CSS
+   assets/css/profile.css
+   ============================================ */
+
+.profile-layout {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+/* ── Picture Card ───────────────────────────── */
+.profile-pic-card {
+    width: 240px;
+    flex-shrink: 0;
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    text-align: center;
+    border: 1px solid #f0f0f0;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #6c63ff;
+    margin-bottom: 14px;
+}
+
+.profile-pic-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.profile-email {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 8px;
+    word-break: break-all;
+}
+
+.profile-joined {
+    font-size: 12px;
+    color: #9ca3af;
+    margin-top: 6px;
+}
+
+/* ── Form Card ──────────────────────────────── */
+.profile-form-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    border: 1px solid #f0f0f0;
+}
+
+.profile-form-card .form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-form-card label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.profile-form-card input,
+.profile-form-card textarea {
+    padding: 11px 14px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #1f2937;
+    outline: none;
+    font-family: inherit;
+    background: #fafafa;
+    transition: border-color 0.2s;
+}
+
+.profile-form-card input:focus,
+.profile-form-card textarea:focus {
+    border-color: #6c63ff;
+    background: #fff;
+}
+
+.profile-form-card textarea { resize: vertical; }
+
+/* ── Responsive ─────────────────────────────── */
+@media (max-width: 700px) {
+    .profile-layout { flex-direction: column; }
+    .profile-pic-card { width: 100%; }
+}
